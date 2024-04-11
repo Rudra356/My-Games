@@ -31,6 +31,15 @@ class guessGame {
     void att(){
         System.out.println();
     }
+    void grading(){
+        if (noOfGusses>10) {
+            System.out.println("B");
+        }else if(noOfGusses>3&&noOfGusses<=1){
+            System.out.println("A");
+        }else{
+            System.out.println("C");
+        }
+    }
 
     void playGame() {
         while (true) {
@@ -46,6 +55,7 @@ class guessGame {
                 }
             } else {
                System.out.println("Your total number of guesses is :"+noOfGusses);
+               grading();
                return;
             }
         } 
@@ -57,6 +67,5 @@ public class Number_Guessing {
     public static void main(String[] args) {
         guessGame player1 = new guessGame();
         player1.playGame();
-        player1.att();
     }
 }
